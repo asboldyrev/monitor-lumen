@@ -1,0 +1,25 @@
+{
+    "name": "asboldyrev/monitor",
+    "autoload": {
+        "psr-4": {
+            "Asboldyrev\\Monitor\\": "src/"
+        },
+		"files": [
+			"src/helpers.php"
+		]
+    },
+    "authors": [
+        {
+            "name": "Andrew",
+            "email": "angelcorpc@ya.ru"
+        }
+    ],
+    "require-dev": {
+        "symfony/var-dumper": "^4.4"
+    },
+    "require": {
+        "filp/whoops": "^2.14",
+        "bramus/router": "^1.6",
+        "nesbot/carbon": "^2.57"
+    }
+}

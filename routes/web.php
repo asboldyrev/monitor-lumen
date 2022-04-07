@@ -16,3 +16,16 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+
+$router->group([
+    'prefix' => 'api'
+], function() use ($router) {
+
+	$router->get('processor', 'ApiController@processor');
+
+	$router->get('file-systems', 'ApiController@fileSystems');
+
+	$router->get('last-login', 'ApiController@lastLogin');
+
+});

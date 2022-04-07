@@ -24,7 +24,7 @@ class Login implements JsonSerializable
 
 				$this->list[] = [
 					'user' => $user,
-					'date' => Carbon::createFromTimeString($date),
+					'date' => Carbon::createFromTimeString($date, config('app.timezone'))->toIso8601String(),
 				];
 			}
 		}

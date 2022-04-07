@@ -1,7 +1,7 @@
 <?php
 
 if (!function_exists('bytes_convert')) {
-	function bytes_convert(string $bytes, string $format = NULL):string {
+	function bytes_convert(string $bytes, string $format = NULL, int $precission = 0):string {
 		$base = 1024;
 		$units = [ 'B', 'KB', 'MB', 'GB', 'TB' ];
 
@@ -19,6 +19,6 @@ if (!function_exists('bytes_convert')) {
 			$size = pow($base, $exp);
 		}
 
-		return sprintf('%d %s', round($bytes / $size), $format);
+		return round($bytes / $size, $precission) . ' ' . $format;
 	}
 }

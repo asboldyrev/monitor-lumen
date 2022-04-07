@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Services\Models\Average;
 use App\Services\Models\FileSystem;
 use App\Services\Models\Login;
+use App\Services\Models\Memory;
 use App\Services\Models\Processor;
 
 class ApiController extends Controller
@@ -34,5 +35,12 @@ class ApiController extends Controller
 		$average = new Average();
 
 		return response()->json($average);
+	}
+
+
+	public function memory() {
+		$memory = new Memory();
+
+		return response()->json($memory);
 	}
 }

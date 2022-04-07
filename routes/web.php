@@ -30,4 +30,6 @@ $router->group([
 
 	$router->get('load', 'ApiController@load');
 
+	$router->get('memory', 'ApiController@memory');
+
 });

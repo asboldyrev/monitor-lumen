@@ -34,4 +34,6 @@ $router->group([
 
 	$router->get('system', 'ApiController@system');
 
+	$router->get('docker', 'ApiController@docker');
+
 });

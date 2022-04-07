@@ -8,6 +8,7 @@ use App\Services\Models\Login;
 use App\Services\Models\Memory;
 use App\Services\Models\System;
 use App\Services\Models\Processor;
+use App\Services\Models\Docker;
 
 class ApiController extends Controller
 {
@@ -50,5 +51,12 @@ class ApiController extends Controller
 		$system = new System();
 
 		return response()->json($system);
+	}
+
+
+	public function docker() {
+		$docker = New Docker();
+
+		return response()->json($docker);
 	}
 }

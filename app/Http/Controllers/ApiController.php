@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Services\Models\Average;
 use App\Services\Models\FileSystem;
 use App\Services\Models\Login;
 use App\Services\Models\Processor;
@@ -26,5 +27,12 @@ class ApiController extends Controller
 		$logins = new Login();
 
 		return response()->json($logins);
+	}
+
+
+	public function load() {
+		$average = new Average();
+
+		return response()->json($average);
 	}
 }

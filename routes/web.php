@@ -28,4 +28,6 @@ $router->group([
 
 	$router->get('last-login', 'ApiController@lastLogin');
 
+	$router->get('load', 'ApiController@load');
+
 });

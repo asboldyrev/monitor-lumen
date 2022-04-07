@@ -55,7 +55,11 @@ class ApiController extends Controller
 
 
 	public function docker() {
-		$docker = New Docker();
+		$docker = [];
+
+		if(config('monitor.docker')) {
+			$docker = New Docker();
+		}
 
 		return response()->json($docker);
 	}

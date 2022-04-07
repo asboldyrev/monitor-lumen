@@ -10,5 +10,6 @@ return [
 	'last_login' => [
 		'show' => true,
 		'max' => 5,
-	]
+	],
+	'docker' => true
 ];

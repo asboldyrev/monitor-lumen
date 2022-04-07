@@ -32,4 +32,6 @@ $router->group([
 
 	$router->get('memory', 'ApiController@memory');
 
+	$router->get('system', 'ApiController@system');
+
 });

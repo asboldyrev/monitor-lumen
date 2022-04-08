@@ -6,19 +6,19 @@
 		<table class="table table-striped table-hover">
 			<tbody>
 				<tr>
-					<td>Система</td>
+					<td>Модель</td>
 					<td>{{ model }}</td>
 				</tr>
 				<tr>
-					<td>Ядро</td>
+					<td>Частота</td>
 					<td>{{ frequency }}</td>
 				</tr>
 				<tr>
-					<td>Время работы</td>
+					<td>Размер кеша</td>
 					<td>{{ cache }}</td>
 				</tr>
 				<tr>
-					<td>Время работы</td>
+					<td>Температура</td>
 					<td>{{ temperature }}</td>
 				</tr>
 			</tbody>

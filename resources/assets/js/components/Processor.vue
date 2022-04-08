@@ -1,0 +1,66 @@
+<template>
+	<div class="card">
+		<div class="card-header">
+			<div class="card-title h3">Процессор</div>
+		</div>
+		<table class="table table-striped table-hover my-1">
+			<tbody>
+				<tr class="active">
+					<td>Система</td>
+					<td>{{ model }}</td>
+				</tr>
+				<tr class="active">
+					<td>Ядро</td>
+					<td>{{ frequency }}</td>
+				</tr>
+				<tr class="active">
+					<td>Время работы</td>
+					<td>{{ cache }}</td>
+				</tr>
+				<tr class="active">
+					<td>Время работы</td>
+					<td>{{ temperature }}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</template>
+
+<script>
+	export default {
+		data() {
+			return {
+				model: 'N.A.',
+				frequency: 'N.A.',
+				cache: 'N.A.',
+				temperature: 'N.A.'
+			}
+		},
+		beforeMount() {
+			this.update();
+		},
+		methods: {
+			update() {
+				fetch(
+					'/api/processor',
+					{
+						headers: {
+							'Content-Type': 'application/json;charset=utf-8'
+						}
+					}
+				)
+				.then(response => response.json())
+				.then(result => {
+					this.model = result.model;
+					this.frequency = result.frequency;
+					this.cache = result.cache;
+					this.temperature = result.temperature ? result.temperature : 'N.A.';
+
+					if(result.temperature) {
+						setTimeout(this.update, 10000);
+					}
+				});
+			}
+		}
+	}
+</script>

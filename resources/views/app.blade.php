@@ -12,8 +12,8 @@
 		<div id="app">
 			<div class="container my-2">
 				<div class="columns">
-					<div class="column col-3"><appsystem></appsystem></div>
-					<div class="column col-3">Processor</div>
+					<div class="column col-3"><app-system></app-system></div>
+					<div class="column col-3"><app-processor></app-processor></div>
 					<div class="column col-3">Memory</div>
 					<div class="column col-3">Average</div>
 					<div class="column col-3">FileSystem</div>

@@ -1,9 +1,11 @@
 const Vue = require('vue')
 
 import System from './components/System.vue'
+import Processor from './components/Processor.vue'
 
 const app = Vue.createApp({
 	components: {
-		appsystem: System
+		appSystem: System,
+		appProcessor: Processor,
 	}
 }).mount('#app');

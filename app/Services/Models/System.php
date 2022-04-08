@@ -25,10 +25,13 @@ class System implements JsonSerializable
 	public function __construct() {
 		$info = SystemInfo::parse();
 
+		$uptime = CarbonInterval::createFromFormat('s', $info['uptime'])->roundMinute();
+		$uptime->setLocale('ru');
+
 		$this->hostname = $info['hostname'];
 		$this->system = $info['os'];
 		$this->kernel = $info['kernel'];
-		$this->uptime = CarbonInterval::createFromFormat('s', $info['uptime'])->round();
+		$this->uptime = (string)$uptime;
 		$this->lastBoot = Carbon::now(config('app.timezone'))->subSeconds($info['uptime'])->toIso8601String();
 		$this->serverDate = Carbon::createFromTimeString($info['server_date'], config('app.timezone'))->toIso8601String();
 	}

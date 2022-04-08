@@ -1,11 +1,9 @@
 const Vue = require('vue')
 
-const app = {
-	data() {
-		return {
-			//
-		}
-	}
-}
+import System from './components/System.vue'
 
-Vue.createApp(app).mount('#app')
+const app = Vue.createApp({
+	components: {
+		appsystem: System
+	}
+}).mount('#app');

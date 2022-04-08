@@ -16,7 +16,8 @@ mix
     .version()
     .extract(['vue', 'vue-router', 'moment'])
     .js('resources/assets/js/app.js', 'public/js/')
-    .sass('resources/assets/sass/app.scss', 'public/css/');
+    .sass('resources/assets/sass/app.scss', 'public/css/')
+	.vue();
 
 mix.browserSync({
 	proxy: process.env.APP_URL,

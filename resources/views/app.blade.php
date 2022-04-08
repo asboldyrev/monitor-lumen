@@ -9,7 +9,19 @@
 		<title>{{ env('APP_NAME') }}</title>
 	</head>
 	<body>
-		<div id="app"></div>
+		<div id="app">
+			<div class="container my-2">
+				<div class="columns">
+					<div class="column col-3"><appsystem></appsystem></div>
+					<div class="column col-3">Processor</div>
+					<div class="column col-3">Memory</div>
+					<div class="column col-3">Average</div>
+					<div class="column col-3">FileSystem</div>
+					<div class="column col-3">Login</div>
+					<div class="column col-3">Docker</div>
+				</div>
+			</div>
+		</div>
 		<script src="{{ mix('/js/manifest.js') }}"></script>
 		<script src="{{ mix('/js/vendor.js') }}"></script>
 		<script src="{{ mix('/js/app.js') }}"></script>

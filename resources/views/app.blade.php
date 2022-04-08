@@ -15,7 +15,7 @@
 					<div class="column col-3"><app-system></app-system></div>
 					<div class="column col-3"><app-processor></app-processor></div>
 					<div class="column col-3">Memory</div>
-					<div class="column col-3">Average</div>
+					<div class="column col-3"><app-average></app-average></div>
 					<div class="column col-3">FileSystem</div>
 					<div class="column col-3">Login</div>
 					<div class="column col-3">Docker</div>

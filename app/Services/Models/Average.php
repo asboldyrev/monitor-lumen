@@ -30,7 +30,7 @@ class Average implements JsonSerializable
 			array_walk(
 				$load,
 				function(&$value) use ($core_count) {
-					$value = $value * 100 / $core_count;
+					$value = round($value * 100 / $core_count);
 					if ($value > 100) {
 						$value = 100;
 					}

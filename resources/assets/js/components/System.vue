@@ -3,17 +3,17 @@
 		<div class="card-header">
 			<div class="card-title h3">Система</div>
 		</div>
-		<table class="table table-striped table-hover my-1">
+		<table class="table table-striped table-hover">
 			<tbody>
-				<tr class="active">
+				<tr>
 					<td>Система</td>
 					<td>{{ system }}</td>
 				</tr>
-				<tr class="active">
+				<tr>
 					<td>Ядро</td>
 					<td>{{ kernel }}</td>
 				</tr>
-				<tr class="active">
+				<tr>
 					<td>Время работы</td>
 					<td>{{ uptime }}</td>
 				</tr>

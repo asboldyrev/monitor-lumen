@@ -3,21 +3,21 @@
 		<div class="card-header">
 			<div class="card-title h3">Процессор</div>
 		</div>
-		<table class="table table-striped table-hover my-1">
+		<table class="table table-striped table-hover">
 			<tbody>
-				<tr class="active">
+				<tr>
 					<td>Система</td>
 					<td>{{ model }}</td>
 				</tr>
-				<tr class="active">
+				<tr>
 					<td>Ядро</td>
 					<td>{{ frequency }}</td>
 				</tr>
-				<tr class="active">
+				<tr>
 					<td>Время работы</td>
 					<td>{{ cache }}</td>
 				</tr>
-				<tr class="active">
+				<tr>
 					<td>Время работы</td>
 					<td>{{ temperature }}</td>
 				</tr>

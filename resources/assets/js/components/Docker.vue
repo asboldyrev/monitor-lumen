@@ -43,6 +43,7 @@
 				)
 				.then(response => response.json())
 				.then(result => {
+					this.containers = [];
 					result
 						.sort((curr) => {
 							return curr.state == 'running' ? -1 : 1

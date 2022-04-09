@@ -56,6 +56,7 @@
 				)
 				.then(response => response.json())
 				.then(result => {
+					this.disks = [];
 					result
 					.sort((current, next) => {
 						return current.mount > next.mount ? 1 : -1

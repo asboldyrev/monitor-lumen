@@ -16,7 +16,7 @@
 			<label>5 минут</label>
 			<div class="bar my-2">
 				<div
-					class="bar-item bg-warning"
+					class="bar-item bg-success"
 					role="progressbar"
 					:style="{ width: percent[1] + '%'}"
 				>{{ percent[1] + '%' }}</div>
@@ -24,32 +24,12 @@
 			<label>15 минут</label>
 			<div class="bar my-2">
 				<div
-					class="bar-item bg-success"
+					class="bar-item bg-primary"
 					role="progressbar"
 					:style="{ width: percent[2] + '%'}"
 				>{{ percent[2] + '%' }}</div>
 			</div>
 		</div>
-		<!--<table class="table table-striped table-hover my-1">
-			<tbody>
-				<tr class="active">
-					<td>Система</td>
-					<td>{{ model }}</td>
-				</tr>
-				<tr class="active">
-					<td>Ядро</td>
-					<td>{{ frequency }}</td>
-				</tr>
-				<tr class="active">
-					<td>Время работы</td>
-					<td>{{ cache }}</td>
-				</tr>
-				<tr class="active">
-					<td>Время работы</td>
-					<td>{{ temperature }}</td>
-				</tr>
-			</tbody>
-		</table>-->
 	</div>
 </template>
 

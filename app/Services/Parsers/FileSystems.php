@@ -17,9 +17,9 @@ class FileSystems
 			}
 
 			$volumes[] = [
-				'total' => bytes_convert($total * 1024),
-				'used' => bytes_convert($used * 1024),
-				'free' => bytes_convert($free * 1024),
+				'total' => bytes_convert($total * 1024, null, 2),
+				'used' => bytes_convert($used * 1024, null, 2),
+				'free' => bytes_convert($free * 1024, null, 2),
 				'percent_used' => intval($percent),
 				'type' => $type,
 				'mount' => $mount,

@@ -14,7 +14,7 @@
 				<div class="columns">
 					<div class="column col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-4 col-3 my-2"><app-system></app-system></div>
 					<div class="column col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-4 col-3 my-2"><app-processor></app-processor></div>
-					<div class="column col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-4 col-3 my-2">Memory</div>
+					<div class="column col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-4 col-3 my-2"><app-memory></app-memory></div>
 					<div class="column col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-4 col-3 my-2"><app-average></app-average></div>
 					<div class="column col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-4 col-3 my-2">FileSystem</div>
 					<div class="column col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-4 col-3 my-2">Login</div>

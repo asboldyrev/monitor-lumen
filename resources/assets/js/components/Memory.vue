@@ -22,8 +22,9 @@
 		<div class="card-body">
 			<div class="bar my-2">
 				<div
-					class="bar-item bg-warning"
+					class="bar-item"
 					role="progressbar"
+					:class="{ 'bg-warning': (percent < 75), 'bg-error': (percent >= 75) }"
 					:style="{ width: percent + '%'}"
 				>{{ percentUsed }}</div>
 			</div>

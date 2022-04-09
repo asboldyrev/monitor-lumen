@@ -56,7 +56,11 @@
 				)
 				.then(response => response.json())
 				.then(result => {
-					result.forEach((item) => {
+					result
+					.sort((current, next) => {
+						return current.mount > next.mount ? 1 : -1
+					})
+					.forEach((item) => {
 						this.disks.push(item);
 					});
 

@@ -17,7 +17,7 @@
 					<div class="column col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-4 col-3 my-2"><app-memory><</div>
 					<div class="column col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-4 col-3 my-2"><app-average></app-average></div>
 					<div class="column col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-8 col-6 my-2"><app-filesystem></app-filesystem></div>
-					<div class="column col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-4 col-3 my-2">Docker</div>
+					<div class="column col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-8 col-6 my-2"><app-docker></app-docker></div>
 				</div>
 			</div>
 		</div>

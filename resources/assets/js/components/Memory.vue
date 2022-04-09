@@ -19,14 +19,15 @@
 				</tr>
 			</tbody>
 		</table>
+
 		<div class="card-body">
 			<div class="bar my-2">
 				<div
 					class="bar-item"
 					role="progressbar"
-					:class="{ 'bg-warning': (percent < 75), 'bg-error': (percent >= 75) }"
+					:class="classBarUsed()"
 					:style="{ width: percent + '%'}"
-				>{{ percentUsed }}</div>
+				><span v-if="roundPercent > 10">{{ roundPercent }} %</span></div>
 			</div>
 		</div>
 	</div>
@@ -43,8 +44,8 @@
 			}
 		},
 		computed: {
-			percentUsed() {
-				return Math.round(this.percent) + '%';
+			roundPercent() {
+				return Math.round(this.percent);
 			}
 		},
 		methods: {
@@ -66,6 +67,17 @@
 
 					//setTimeout(this.update, 60000);
 				});
+			},
+			classBarUsed() {
+				if(this.roundPercent < 50) {
+					return 'bg-success';
+				}
+
+				if(this.roundPercent < 75) {
+					return 'bg-warning';
+				}
+
+				return 'bg-error';
 			}
 		},
 		beforeMount() {

@@ -1,5 +1,5 @@
 <template>
-	<div class="card">
+	<div class="card" v-if="containers.length">
 		<div class="card-header">
 			<div class="card-title h3">Docker</div>
 		</div>
@@ -51,7 +51,7 @@
 						this.containers.push(item);
 					});
 
-					//setTimeout(this.update, 600000);
+					setTimeout(this.update, 300000);
 				});
 			}
 		},

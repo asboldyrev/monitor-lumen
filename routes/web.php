@@ -36,4 +36,6 @@ $router->group([
 
 	$router->get('docker', 'ApiController@docker');
 
+	$router->get('utilization', 'ApiController@utilization');
+
 });

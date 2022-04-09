@@ -9,6 +9,7 @@ use App\Services\Models\Memory;
 use App\Services\Models\System;
 use App\Services\Models\Processor;
 use App\Services\Models\Docker;
+use App\Services\Models\Utilization;
 
 class ApiController extends Controller
 {
@@ -62,5 +63,12 @@ class ApiController extends Controller
 		}
 
 		return response()->json($docker);
+	}
+
+
+	public function utilization() {
+		$utilization = New Utilization();
+
+		return response()->json($utilization);
 	}
 }

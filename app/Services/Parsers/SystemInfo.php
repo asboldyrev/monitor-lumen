@@ -2,6 +2,8 @@
 
 namespace App\Services\Parsers;
 
+use Carbon\Carbon;
+
 class SystemInfo
 {
 	public static function parse() {
@@ -9,12 +11,14 @@ class SystemInfo
 
 		$uptime = shell_exec('cat /proc/uptime | awk \'{print $1}\' | tr -d \\\\n');
 
+		$server_date = shell_exec('/bin/date --rfc-3339=ns');
+
 		return [
 			'hostname'      => php_uname('n'),
 			'os'            => self::getSystemName(),
 			'kernel'        => shell_exec('/bin/uname -r | tr -d \\\\n') ?: '',
 			'uptime'        => round($uptime),
-			'server_date'   => shell_exec('/bin/date') ?: date('Y-m-d H:i:s'),
+			'server_date'   => Carbon::createFromTimestamp(time(), config('app.timezone')),
 			'timezone'      => $tz,
 		];
 	}

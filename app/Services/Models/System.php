@@ -33,7 +33,7 @@ class System implements JsonSerializable
 		$this->kernel = $info['kernel'];
 		$this->uptime = (string)$uptime;
 		$this->lastBoot = Carbon::now(config('app.timezone'))->subSeconds($info['uptime'])->toIso8601String();
-		$this->serverDate = Carbon::createFromTimeString($info['server_date'], config('app.timezone'))->toIso8601String();
+		$this->serverDate = $info['server_date']->toIso8601String();
 	}
 
 
